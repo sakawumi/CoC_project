@@ -5,6 +5,7 @@ for /r %%A in (*.md) do (
     echo %%A
 
     pandoc -f markdown -t html "%%A" -s -o "%%~dpnA.html"
+    del /Q %%A
     REM pandoc -f markdown -t docx "%%A" -s -o "%%~dpnA.docx"
  
     REM ↑必要な方を使えばいいし、両方使っても良い
