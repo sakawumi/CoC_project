@@ -1,6 +1,8 @@
 @echo off
 cd /d %~dp0
- 
+REM 文字コードをUTF-8に設定
+chcp 65001
+
 for /r %%A in (*.md) do (
     echo %%A
 
